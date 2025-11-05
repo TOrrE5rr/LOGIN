@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+       <a href="../html/index.html">Inicio</a>
+    <h1>Registrarse</h1>
+<form action="../php/agregar.php" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required> <br>
+    <input type="email" name="email" placeholder="Correo electrónico" required> <br>
+    <input type="password" name="contrasena" placeholder="Contraseña" required> <br>
+    
+    <select name="id_rol" required>
+        <option value="1">Cliente</option>
+    </select> <br>
+
+    <button type="submit">Registrar</button>
+</form>
+
+
+
+</body>
+</html>
