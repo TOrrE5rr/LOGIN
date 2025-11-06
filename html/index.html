@@ -6,14 +6,14 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="/php/agregar.php" method="post">
+    <form action="../php/login.php" method="post">
         <h1>Inicio de Sesion</h1>
         <br>
-        <label for=""> Usuario </label>
-        <input type="text">
+        <label for=""> Nombre </label>
+        <input type="text" name="nombre" required>
         <br>
-        <label for=""> Contraseña </label>
-        <input type="text">
+        <label for=""> Contraseña </label required>
+        <input type="text" name="contrasena">
         <br>
 
         <button type="submit">Ingresar</button>
