@@ -1,26 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Inicio de Sesión</title>
+    <style>
+         body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 26px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6a5acd;
+            box-shadow: 0 0 5px rgba(106, 90, 205, 0.4);
+            outline: none;
+        }
+
+        button {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a4dbd;
+        }
+
+        a {
+            color: #6a5acd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .links {
+            margin-top: 15px;
+        }
+
+        .links a {
+            display: block;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 400px) {
+            form {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
 <body>
     <form action="../php/login.php" method="post">
-        <h1>Inicio de Sesion</h1>
-        <br>
-        <label for=""> Nombre </label>
-        <input type="text" name="nombre" required>
-        <br>
-        <label for=""> Contraseña </label required>
-        <input type="text" name="contrasena">
-        <br>
+        <h1>Inicio de Sesión</h1>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" required>
 
         <button type="submit">Ingresar</button>
+
+        <div class="links">
+            <a href="olvide.html">Olvidé mi Contraseña</a>
+            <a href="registro.html">Registrarse</a>
+        </div>
     </form>
-
-   <a href="olvide.html">Olvide mi Contraseña</a> <br> <br>
-   <a href="registro.html">Registrarse</a>
-
 </body>
 </html>

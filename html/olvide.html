@@ -2,20 +2,115 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Recuperar contraseña</title>
+    <title>Recuperar Contraseña</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* === Estilos generales === */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* === Contenedor principal === */
+        .container {
+            background: #ffffff;
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6a5acd;
+            box-shadow: 0 0 5px rgba(106, 90, 205, 0.4);
+            outline: none;
+        }
+
+        button {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a4dbd;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        a {
+            color: #6a5acd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* === Responsivo === */
+        @media (max-width: 400px) {
+            .container {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>Recuperar contraseña</h2>
-    <form action="../php/recuperar.php" method="POST">
-        <label>Correo electrónico:</label><br>
-        <input type="email" name="correo" required><br><br>
+    <div class="container">
+        <h2>Recuperar Contraseña</h2>
 
-        <label>Nueva contraseña:</label><br>
-        <input type="password" name="nueva_contrasena" required><br><br>
+        <form action="../php/recuperar.php" method="POST">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
 
-        <button type="submit">Actualizar contraseña</button>
-    </form>
+            <label for="nueva_contrasena">Nueva contraseña:</label>
+            <input type="password" id="nueva_contrasena" name="nueva_contrasena" required>
 
-    <p><a href="index.html">Volver al inicio</a></p>
+            <button type="submit">Actualizar Contraseña</button>
+        </form>
+
+        <p><a href="index.html">Volver al inicio</a></p>
+    </div>
 </body>
 </html>

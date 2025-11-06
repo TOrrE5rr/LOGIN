@@ -1,26 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <style>
+        /* === Estilo general === */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* === Contenedor del formulario === */
+        .container {
+            background-color: #fff;
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 26px;
+        }
+
+        /* === Campos del formulario === */
+        input, select {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #6a5acd;
+            box-shadow: 0 0 5px rgba(106, 90, 205, 0.4);
+            outline: none;
+        }
+
+        /* === Botón === */
+        button {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a4dbd;
+        }
+
+        /* === Enlace de regreso === */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #6a5acd;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* === Responsivo === */
+        @media (max-width: 400px) {
+            .container {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-       <a href="../html/index.html">Inicio</a>
-    <h1>Registrarse</h1>
-<form action="../php/agregar.php" method="POST">
-    <input type="text" name="nombre" placeholder="Nombre" required> <br>
-    <input type="email" name="email" placeholder="Correo electrónico" required> <br>
-    <input type="password" name="contrasena" placeholder="Contraseña" required> <br>
-    
-    <select name="id_rol" required>
-        <option value="1">Cliente</option>
-    </select> <br>
+    <div class="container">
+        <a href="../html/index.html" class="back-link">← Volver al inicio</a>
+        <h1>Registrarse</h1>
 
-    <button type="submit">Registrar</button>
-</form>
+        <form action="../php/agregar.php" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="password" name="contrasena" placeholder="Contraseña" required>
 
+            <select name="id_rol" required>
+                <option value="1">Cliente</option>
+            </select>
 
-
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
 </body>
 </html>
